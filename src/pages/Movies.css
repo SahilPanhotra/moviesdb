@@ -1,0 +1,47 @@
+.movie__container {
+  padding: 30px;
+  margin-top: 40px;
+}
+.row__movie {
+  justify-content: center !important;
+  flex-direction: column !important;
+}
+.search__title{
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    letter-spacing: .1em;
+    font-size: 45px;
+    max-width: 1000px;
+    margin-bottom: 40px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 40px;
+}
+
+.overlay {
+  background-image: url("https://tiermaker.com/images/templates/5210211595965134.jpeg");
+  z-index: -1;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 326px;
+  filter: blur(5px);
+}
+.overlay:after {
+  background-color: rgba(60, 60, 60, 0.603);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 326px;
+  
+}

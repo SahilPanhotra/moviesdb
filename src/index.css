@@ -9,6 +9,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+::selection {
+  color: white;
+  background: #ed7a07;
+}
 .container {
   padding: 8px 0px;
 }
@@ -20,4 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+a {
+  text-decoration: none;
 }
