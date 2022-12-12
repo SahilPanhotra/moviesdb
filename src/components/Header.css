@@ -1,0 +1,37 @@
+.row__header {
+    display: flex;
+    flex-direction: column ;
+}
+.header {
+    padding: 24px 16px;
+}
+.header__image--wrapper {
+    margin-top: 24px;
+}
+.header__title {
+    font-size: 56px;
+    font-weight: 600;
+    max-width: 900px;
+    line-height: 1.15;
+    text-align: center;
+    color: #ed7a07;
+    margin: 0 0 30px;
+}
+.header__subtitle {
+    font-size: 40px;
+    font-weight: 500;
+    max-width: 740px;
+    line-height: 1.10;
+    text-align: center;
+    margin: 0 0 40px;
+    text-transform: uppercase;
+}
+.brand-color {
+    color: #ed7a07;
+}
+.bold {
+    font-weight: 700;
+}
+.header__img {
+    width: 100%;
+}
