@@ -1,10 +1,10 @@
 import React from 'react'
 import './Search.css'
 
-const Search = props => {
+const Search = ({search}) => {
   return (
     <>
-        <input type="text"  className='search__input'/>
+        <input type="text" placeholder={search} className='search__input' required/>
     </>
   )
 }

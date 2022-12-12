@@ -35,3 +35,29 @@
 .header__img {
     width: 100%;
 }
+.search__wrapper {
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search__btn {
+    background: none;
+    border: none;
+    font-size: 30px; 
+    display: flex;
+    align-items: center;
+}
+.icon {
+  padding: 4px;
+  position: absolute;
+  right: 16px;
+}
+.icon:hover {
+    color: #ed7a07  ;
+}
+.icon:active{
+    color:green;
+}
