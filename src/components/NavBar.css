@@ -1,38 +1,93 @@
 .logo__wrapper {
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .logo {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-.logo--white{
-    filter: invert(1);
+.logo--white {
+  filter: invert(1);
 }
-.logo--text{
-    font-size: large;
-    font-weight: 700;
-    color:black;
+.logo--text {
+  font-size: large;
+  font-weight: 700;
+  color: black;
 }
-.logo--text--white{
-    font-size: large;
-    font-weight: 700;
-    color:white;
-} 
+.logo--text--white {
+  font-size: large;
+  font-weight: 700;
+  color: white;
+}
 .btn {
-    padding: 16px 24px;
-    color: white;
-    background-color: #ed7a07;
-    border: none;
-    border-radius: 999px;
-    font-weight: 500;
-    cursor: pointer;
+  padding: 16px 24px;
+  color: white;
+  background-color: #ed7a07;
+  border: none;
+  border-radius: 999px;
+  font-weight: 500;
+  cursor: pointer;
 }
-@media (max-width:375px) {
-    .logo--text{
-        display: none;
-    }
+
+.movie__container {
+  margin-top: 40px;
+}
+.row__movie {
+  justify-content: center !important;
+  flex-direction: column !important;
+}
+.search__title {
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 45px;
+  max-width: 1000px;
+  margin-bottom: 40px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 40px;
+}
+.search__wrapper--movies {
+  max-width: 600px;
+}
+.hey {
+  color: rgb(0, 0, 0);
+}
+
+.overlay {
+  background-image: url("https://tiermaker.com/images/templates/5210211595965134.jpeg");
+  z-index: -1;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: blur(5px);
+}
+.overlay:after {
+  background-color: rgba(60, 60, 60, 0.603);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.fix--height {
+  height: 326px;
+  position: relative;
+}
+
+@media (max-width: 375px) {
+  .logo--text {
+    display: none;
+  }
 }

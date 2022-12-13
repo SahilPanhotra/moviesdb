@@ -2,7 +2,9 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import "./NavBar.css";
-const NavBar = ({ color }) => {
+import Search from "./ui/Search";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+const NavBar = () => {
   const location = useLocation();
   let active = false;
 
@@ -10,7 +12,7 @@ const NavBar = ({ color }) => {
     active = true;
   }
   return (
-    <div>
+    <div className={active? "fix--height":""}>
       <nav className="container">
         <div className="row">
           <Link to="/">
@@ -31,7 +33,22 @@ const NavBar = ({ color }) => {
             </div>
           </div>
         </div>
+        
       </nav>
+      {active ? <div className="movie__container">
+        <div className="row row__movie">
+          <h1 className="search__title">Browse our Movies</h1>
+
+          <div className="search__wrapper search__wrapper--movies">
+            <Search search="Search By Name of Movie" />
+            <button className="search__btn">
+              <FontAwesomeIcon icon="fa-magnifying-glass" className="icon" />
+            </button>
+          </div>
+          
+        </div>  
+      </div>:""}
+      {active?<div className="overlay"></div>:""}
     </div>
   );
 };
