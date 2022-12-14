@@ -4,14 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Search from "../components/ui/Search";
 import Card from "../components/Card";
 
-const Movies = ({ movies }) => {
+const Movies = ({ movies,search,error }) => {
+  
   
   return (
     <>
       <section className="movies__result">
-        <h2 className="search__results--heading">Search results:</h2>
+        <h2 className="search__results--heading">Search results: {movies?.length>0?<span>for {search}</span>:null}</h2>
         <div className="results">
-        {movies.map((movie) =>
+        {movies?.map((movie) =>
         <div key={movie.imdbID} className="card__wrapper">
           <Card
             key={movie.imdbID}
