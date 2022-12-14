@@ -22,7 +22,7 @@ const NavBar = ({search,loading,handleSearchChange,handleSearch,error}) => {
                 alt=""
                 className={active ? "logo logo--white" : "logo"}
               />
-              <span className={active ? "logo--text--white" : "logo--text"}>
+              <span className={active ? "logo--text--white logo--text" : "logo--text"}>
                 MoviesDB
               </span>
             </figure>

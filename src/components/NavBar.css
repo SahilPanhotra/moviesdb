@@ -41,14 +41,13 @@
 }
 .search__title {
   font-weight: 500;
-  letter-spacing: 2px;
   text-align: center;
   letter-spacing: 0.1em;
   font-size: 45px;
+  line-height:1.05;
   max-width: 1000px;
   margin-bottom: 40px;
   color: rgb(255, 255, 255);
-  margin-bottom: 40px;
 }
 .search__wrapper--movies {
   max-width: 600px;
@@ -89,5 +88,8 @@
 @media (max-width: 375px) {
   .logo--text {
     display: none;
+  }
+  .fix--height {
+    height: 400px;
   }
 }

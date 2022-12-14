@@ -6,11 +6,13 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faMagnifyingGlass,
   faSpinner,
+  faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import axios from "axios";
-library.add(faMagnifyingGlass, faSpinner);
+import MovieInfo from "./pages/MovieInfo";
+library.add(faMagnifyingGlass, faSpinner, faArrowLeft);
 
 function App() {
   const [search, setSearch] = useState("");
@@ -29,7 +31,7 @@ function App() {
         setLoading(false);
         setError("Nothing to Search");
         setTimeout(() => {
-          setError('');
+          setError("");
         }, 3000);
       }
       const result = await axios.get(
@@ -46,7 +48,10 @@ function App() {
   }
   useEffect(() => {
     console.log(movies);
-  }, [movies]);
+    if (search === "") {
+      setMovies([]);
+    }
+  }, [search]);
 
   return (
     <>
@@ -74,6 +79,7 @@ function App() {
           path="/movies"
           element={<Movies error={error} search={search} movies={movies} />}
         ></Route>
+        <Route path="/movies/:id" element={<MovieInfo />}></Route>
       </Routes>
     </>
   );

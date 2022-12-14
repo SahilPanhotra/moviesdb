@@ -10,7 +10,7 @@ const Movies = ({ movies,search,error }) => {
   return (
     <>
       <section className="movies__result">
-        <h2 className="search__results--heading">Search results: {movies?.length>0?<span>for {search}</span>:null}</h2>
+        <h2 className="search__results--heading">Search results: {movies?.length>0&&search?.length>0?<span>for {search}</span>:null}</h2>
         <div className="results">
         {movies?.map((movie) =>
         <div key={movie.imdbID} className="card__wrapper">
