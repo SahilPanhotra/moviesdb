@@ -4,7 +4,7 @@ import logo from "../assets/logo.svg";
 import "./NavBar.css";
 import Search from "./ui/Search";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const NavBar = () => {
+const NavBar = ({search,loading,handleSearchChange,handleSearch}) => {
   const location = useLocation();
   let active = false;
 
@@ -40,10 +40,11 @@ const NavBar = () => {
           <h1 className="search__title">Browse our Movies</h1>
 
           <div className="search__wrapper search__wrapper--movies">
-            <Search search="Search By Name of Movie" />
-            <button className="search__btn">
+            <Search placeholder="Search By Name of Movie" search={search} handleSearchChange={handleSearchChange}/>
+            
+            {loading?<span className='search__btn'><FontAwesomeIcon className='icon' icon="fa-spinner" /></span>:<button className="search__btn" onClick={handleSearch}>
               <FontAwesomeIcon icon="fa-magnifying-glass" className="icon" />
-            </button>
+            </button>}
           </div>
           
         </div>  

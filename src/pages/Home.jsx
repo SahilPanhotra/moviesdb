@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '../components/Header'
 
-const Home = () => {
+const Home = ({search,handleSearchChange,handleSearch,loading}) => {
   return (
     <>
-        <Header/>
+        <Header search={search} handleSearchChange={handleSearchChange} handleSearch={handleSearch} loading={loading}/>
     </>
   )
 }

@@ -9,3 +9,27 @@
     font-weight: 600;
     padding: 20px 0;
 }
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+.card__wrapper {
+    width: 20%;
+}
+@media (max-width:1024px) {
+    .card__wrapper {
+        width: 30%;
+    }
+}
+@media (max-width:768px) {
+    .card__wrapper {
+        width: 45%;
+    }
+}
+@media (max-width:468px) {
+    .card__wrapper {
+        width: 90%;
+    }
+}
